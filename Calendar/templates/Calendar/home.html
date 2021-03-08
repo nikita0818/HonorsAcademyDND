@@ -21,10 +21,26 @@
 
     <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize_button" style="align-items: center;">Log In</button>
-    <button id="homework_button" style="align-items: center;">Add Homework</button>
     <button id="signout_button" style="align-items: center;">Sign Out</button>
+    
 
     <pre id="content" style="white-space: pre-wrap;align-items: center;"></pre>
+
+    <form>
+      <div class="form-group">
+        <label for="homeworkTitle">Assignment Name: </label>
+        <input type="homework" class="form-control" id="homeworkTitle" aria-describedby="homeworkName" placeholder="Enter Assignment Name">
+      </div>
+      <div class="form-group">
+        <label for="homeworkDuration">Duration: </label>
+        <input type="duration" class="form-control" id="homeworkDuration" placeholder="Enter Duration (Hours)">
+      </div>
+      <div class="form-group">
+        <label for="homeworkDueDate">Due Date: </label>
+        <input type="dueDate" class="form-control" id="homeworkDueDate" placeholder="Enter Due Date (MM/DD/YY)">
+      </div>
+      <button id= homework_button type="submit" class="btn btn-primary">Add Homework</button>
+    </form>
 
     <script type="text/javascript">
       // Client ID and API key from the Developer Console
@@ -143,7 +159,43 @@
             appendPre('No upcoming events found.');
           }
         });
+      
       }
+      //   var event = {
+      //   'summary': 'homeworkTitle',
+      //   'start': {
+      //     'dateTime': 'homeworkDueDateT09:00:00-07:00',
+      //     'timeZone': 'America/New_York'
+      //   },
+      //   'end': {
+      //     'dateTime': 'homeworkDueDateT17:00:00-07:00',
+      //     'timeZone': 'America/New_York'
+      //   },
+      //   'recurrence': [
+      //     'RRULE:FREQ=DAILY;COUNT=2'
+      //   ],
+      //   'attendees': [
+      //     {'email': 'lpage@example.com'},
+      //     {'email': 'sbrin@example.com'}
+      //   ],
+      //   'reminders': {
+      //     'useDefault': false,
+      //     'overrides': [
+      //       {'method': 'email', 'minutes': 24 * 60},
+      //       {'method': 'popup', 'minutes': 10}
+      //     ]
+      //   }
+      // };
+
+      // var request = gapi.client.calendar.events.insert({
+      //   'calendarId': 'primary',
+      //   'resource': event
+      // });
+
+      // request.execute(function(event) {
+      //   appendPre('Event created: ' + event.htmlLink);
+      // });
+      
 
     </script>
 
@@ -151,5 +203,7 @@
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
+
+    
   </body>
 </html>
