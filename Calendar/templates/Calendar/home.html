@@ -1,46 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Welcome to Jour</title>
+ <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}   
-    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-    .fa-anchor,.fa-coffee {font-size:200px}
-</style>
+   <!-- <head> -->
+       <title>Title</title>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="css/uikit.min.css" />
+       <script src="js/uikit.min.js"></script>
+       <script src="js/uikit-icons.min.js"></script>
+   <!-- head -->
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
+ 
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js"></script>
+</head>
+ 
+ 
+ <body class= "uk-background-cover" style="background-color: #f4d35e; font-family:Optima">
+<div class="uk-flex uk-flex-row uk-width-1-1 uk-flex-right">
+ <nav style="background-color: #f4d35e; font-family:Optima" class="uk-navbar-container" uk-navbar>
+   <div class="uk-navbar-right">
+       <ul class="uk-navbar-nav">
+           <li style="color:#0d3b66; font-family:Optima;" class="uk-active"><a href="#">Calendar</a></li>
+           <li style="color:#0d3b66; font-family:Optima;" class="uk-active"><a href="#">Home</a></li>
+         </ul>
+   </div>
+ </nav>
+</div>
+   <!-- Header -->
+ <div class="uk-flex uk-flex-column uk-width-1-1" style="background-color: #f4d35e">
+     <div class="uk-card uk-card-default uk-card-body" style="background-color: #f4d35e">
+       <h1 style="color:#0d3b66; font-family:Optima; background-color: #f4d35e" class="uk-heading-line uk-text-center uk-heading-large"><span>Welcome to Jour</span></h1>
+     <h2 style="color:#0d3b66; font-size:30px; font-family:Optima; background-color: #f4d35e"class="uk-text-center uk-heading-small"><span>Log in to Google to get started</span></h2>
+     </div>
+ </div>
+ 
+ <div class="uk-section uk-section-muted" style="color:#0d3b66; background-color: #f4d35e">
+   <div class="uk-container" style="color:#0d3b66; background-color: #f4d35e">
+     <pre id="content" style="color:#0d3b66; background-color: #f4d35e" class="uk-text-center uk-text-large"> </pre>
+   </div>
+ </div>
+ 
+   <!--Add buttons to initiate auth sequence and sign out-->
+<div class="uk-section uk-section-default uk-padding-remove" style="background-color: #f4d35e">
+ <div class="uk-container uk-flex uk-flex-column" style="background-color: #f4d35e">
+   <button id="authorize_button" style="color:#0d3b66; font-family:Optima; background-color: #faf0ca">Log In</button>
+ </div>
+</div>
+ 
+<!-- <div class="uk-section uk-section-default uk-padding-remove-bottom uk-padding-left uk-padding-right" style="background-color: #f4d35e">
+ <div class="uk-container uk-flex uk-flex-row" style="background-color: #f4d35e"> -->
+<div class="uk-grid-collapse uk-child-width-expand@s uk-text-center uk-margin-large-top" uk-grid>
+ <div>
+     <div class="uk-background-muted uk-padding" style="background-color: #f4d35e">
+     </div>
+ </div>
+   <div class="uk-card uk-card-default uk-card-body uk-flex uk-flex-center"  style="background-color: #faf0ca">
+     <form class="uk-form-stacked" >
+       <div class="form-group uk-margin">
+         <label class="uk-form-label" for="homeworkTitle form-horizontal-text">Assignment Name: </label>
+         <input type="homework" class="form-control uk-input uk-form-width-medium" id="homeworkTitle" aria-describedby="homeworkName" placeholder="Enter Assignment Name">
+       </div>
+       <div class="form-group uk-margin">
+         <label class="uk-form-label" for="homeworkDuration form-horizontal-text">Duration: </label>
+         <input type="duration" class="form-control uk-input uk-form-width-medium" id="homeworkDuration" placeholder="Enter Duration (Hours)">
+       </div>
+       <div class="form-group uk-margin">
+         <label class="uk-form-label" for="homeworkDueDate form-horizontal-text">Due Date: </label>
+         <input type="dueDate" class="form-control uk-input uk-form-width-medium" id="homeworkDueDate" placeholder="Enter Due Date (MM/DD/YY)">
+       </div>
+       <button id= homework_button type="submit" class="btn btn-primary">Add Homework</button>
+       <button id="homework_button" style="color:#0d3b66; font-family:Optima; background-color: #faf0ca" >Add Homework</button>
+     </form>
+     </div>
+     <div>
+       <div class="uk-background-muted uk-padding" style="background-color: #f4d35e">
+       </div>
+   </div>
+</div>
+ <!-- </div> -->
+ 
+ <div class="uk-section uk-section-default " style="background-color: #f4d35e">
+   <!-- <div class="uk-container uk-flex uk-flex-column " style="background-color: #f4d35e">
+   <button id="homework_button" style="color:#0d3b66; font-family:Optima; background-color: #faf0ca" >Add Homework</button>
+   </div> -->
+ <div class="uk-container uk-flex uk-flex-column" style="background-color: #f4d35e">
+   <button id="signout_button" style="color:#0d3b66; font-family:Optima; background-color: #faf0ca">Sign Out</button>
+ </div>
+</div>
+ 
+<div class=" uk-section uk-section-default uk-text-center uk-section-xlarge" style="background-color: #f4d35e">
+</div>
 
-<body>
-    <!-- Header -->
-    <header class="w3-container w3-yellow w3-center" style="padding:128px 16px;">
-        <h1 class="w3-margin w3-jumbo">Welcome to Jour</h1>
-        <p class="w3-xlarge">Log in to Google to get started</p>
 
-    <!--Add buttons to initiate auth sequence and sign out-->
-    <button id="authorize_button" style="align-items: center;">Log In</button>
-    <button id="signout_button" style="align-items: center;">Sign Out</button>
-    
+    <!-- THIS IS NEW -->
+    <script type="text/javascript">
+      function fn1()
+      {
+      var Title = document.getelementbyId("homeworkTitle").value;
+     //<!-- add a function to put "+Title as an input for the google calendar-->
 
-    <pre id="content" style="white-space: pre-wrap;align-items: center;"></pre>
+      var Duration = document.getelementbyId("homeworkDuration").value;
+     // <!-- add a function to put "+Duration as an input for the google calendar-->
 
-    <form>
-      <div class="form-group">
-        <label for="homeworkTitle">Assignment Name: </label>
-        <input type="homework" class="form-control" id="homeworkTitle" aria-describedby="homeworkName" placeholder="Enter Assignment Name">
-      </div>
-      <div class="form-group">
-        <label for="homeworkDuration">Duration: </label>
-        <input type="duration" class="form-control" id="homeworkDuration" placeholder="Enter Duration (Hours)">
-      </div>
-      <div class="form-group">
-        <label for="homeworkDueDate">Due Date: </label>
-        <input type="dueDate" class="form-control" id="homeworkDueDate" placeholder="Enter Due Date (MM/DD/YY)">
-      </div>
-      <button id= homework_button type="submit" class="btn btn-primary">Add Homework</button>
-    </form>
+      var DueDate = document.getelementbyId("homeworkDueDate").value;
+     //  <!-- add a function to put "+DueDate as an input for the google calendar-->
+      }
+  </script>
+
+      <button onclick="fn1()" id="homeworkbutton">Add Homework</button>
+
 
     <script type="text/javascript">
       // Client ID and API key from the Developer Console
