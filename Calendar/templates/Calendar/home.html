@@ -1,151 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-   <!-- <head> -->
-       <title>Title</title>
-       <meta charset="utf-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1">
-       <link rel="stylesheet" href="css/uikit.min.css" />
-       <script src="js/uikit.min.js"></script>
-       <script src="js/uikit-icons.min.js"></script>
-   <!-- head -->
-<!-- UIkit CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/uikit.min.css" />
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.min.js"></script>
+
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/css/uikit.min.css" />
  
-<!-- UIkit JS -->
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js"></script>
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.18/dist/js/uikit-icons.min.js"></script>
 </head>
  
- 
- <body class= "uk-background-cover" style="background-color: #f4d35e; font-family:Optima">
+<body class= "uk-background-cover" style="background-color: #f4d35e; font-family:Optima">
 <div class="uk-flex uk-flex-row uk-width-1-1 uk-flex-right">
  <nav style="background-color: #f4d35e; font-family:Optima" class="uk-navbar-container" uk-navbar>
    <div class="uk-navbar-right">
        <ul class="uk-navbar-nav">
-           <li style="color:#0d3b66; font-family:Optima;" class="uk-active"><a href="#">Calendar</a></li>
+           <li style="color:#0d3b66; font-family:Optima;" class="uk-active"><a class="nav-link" href="https://calendar.google.com"><li>Calendar</li></a>
            <li style="color:#0d3b66; font-family:Optima;" class="uk-active"><a href="#">Home</a></li>
          </ul>
    </div>
  </nav>
 </div>
-   <!-- Header -->
- <div class="uk-flex uk-flex-column uk-width-1-1" style="background-color: #f4d35e">
-     <div class="uk-card uk-card-default uk-card-body" style="background-color: #f4d35e">
-       <h1 style="color:#0d3b66; font-family:Optima; background-color: #f4d35e" class="uk-heading-line uk-text-center uk-heading-large"><span>Welcome to Jour</span></h1>
-     <h2 style="color:#0d3b66; font-size:30px; font-family:Optima; background-color: #f4d35e"class="uk-text-center uk-heading-small"><span>Log in to Google to get started</span></h2>
-     </div>
- </div>
+
+<!-- Header -->
+<div class="uk-flex uk-flex-column uk-width-1-1" style="background-color: #f4d35e">
+  <div class="uk-card uk-card-default uk-card-body" style="background-color: #f4d35e">
+    <h1 style="color:#0d3b66; font-family:Optima; background-color: #f4d35e" class="uk-heading-line uk-text-center uk-heading-large"><span>Welcome to Jour</span></h1>
+    <h2 style="color:#0d3b66; font-size:30px; font-family:Optima; background-color: #f4d35e"class="uk-text-center uk-heading-small"><span>Log in to Google to get started</span></h2>
+  </div>
+</div>
  
- <div class="uk-section uk-section-muted" style="color:#0d3b66; background-color: #f4d35e">
-   <div class="uk-container" style="color:#0d3b66; background-color: #f4d35e">
-     <pre id="content" style="color:#0d3b66; background-color: #f4d35e" class="uk-text-center uk-text-large"> </pre>
-   </div>
- </div>
+<div class="uk-section uk-section-muted" style="color:#0d3b66; background-color: #f4d35e">
+  <div class="uk-container" style="color:#0d3b66; background-color: #f4d35e">
+    <pre id="content" style="color:#0d3b66; background-color: #f4d35e" class="uk-text-center uk-text-large"> </pre>
+  </div>
+</div>
  
-   <!--Add buttons to initiate auth sequence and sign out-->
+<!--Add buttons to initiate auth sequence and sign out-->
 <div class="uk-section uk-section-default uk-padding-remove" style="background-color: #f4d35e">
- <div class="uk-container uk-flex uk-flex-column" style="background-color: #f4d35e">
-   <button id="authorize_button" style="color:#0d3b66; font-family:Optima; background-color: #faf0ca">Log In</button>
- </div>
+  <div class="uk-container uk-flex uk-flex-column" style="background-color: #f4d35e">
+    <button id="authorize_button" style="color:#0d3b66; font-family:Optima; background-color: #faf0ca">Log In</button>
+  </div>
 </div>
- 
-<!-- <div class="uk-section uk-section-default uk-padding-remove-bottom uk-padding-left uk-padding-right" style="background-color: #f4d35e">
- <div class="uk-container uk-flex uk-flex-row" style="background-color: #f4d35e"> -->
+
 <div class="uk-grid-collapse uk-child-width-expand@s uk-text-center uk-margin-large-top" uk-grid>
- <div>
-     <div class="uk-background-muted uk-padding" style="background-color: #f4d35e">
-     </div>
- </div>
-   <div class="uk-card uk-card-default uk-card-body uk-flex uk-flex-center"  style="background-color: #faf0ca">
-     <form class="uk-form-stacked" >
-       <div class="form-group uk-margin">
-         <label class="uk-form-label" for="homeworkTitle form-horizontal-text">Assignment Name: </label>
-         <input type="homework" class="form-control uk-input uk-form-width-medium" id="homeworkTitle" aria-describedby="homeworkName" placeholder="Enter Assignment Name">
-       </div>
-       <div class="form-group uk-margin">
-         <label class="uk-form-label" for="homeworkDuration form-horizontal-text">Duration: </label>
-         <input type="duration" class="form-control uk-input uk-form-width-medium" id="homeworkDuration" placeholder="Enter Duration (Hours)">
-       </div>
-       <div class="form-group uk-margin">
-         <label class="uk-form-label" for="homeworkDueDate form-horizontal-text">Due Date: </label>
-         <input type="dueDate" class="form-control uk-input uk-form-width-medium" id="homeworkDueDate" placeholder="Enter Due Date (MM/DD/YY)">
-       </div>
-       <button id= homework_button type="submit" class="btn btn-primary">Add Homework</button>
-       <button id="homework_button" style="color:#0d3b66; font-family:Optima; background-color: #faf0ca" >Add Homework</button>
-     </form>
-     </div>
-     <div>
-       <div class="uk-background-muted uk-padding" style="background-color: #f4d35e">
-       </div>
-   </div>
-</div>
- <!-- </div> -->
- 
- <div class="uk-section uk-section-default " style="background-color: #f4d35e">
-   <!-- <div class="uk-container uk-flex uk-flex-column " style="background-color: #f4d35e">
-   <button id="homework_button" style="color:#0d3b66; font-family:Optima; background-color: #faf0ca" >Add Homework</button>
-   </div> -->
- <div class="uk-container uk-flex uk-flex-column" style="background-color: #f4d35e">
-   <button id="signout_button" style="color:#0d3b66; font-family:Optima; background-color: #faf0ca">Sign Out</button>
- </div>
-</div>
- 
-<div class=" uk-section uk-section-default uk-text-center uk-section-xlarge" style="background-color: #f4d35e">
+  <div>
+    <div class="uk-background-muted uk-padding" style="background-color: #f4d35e">
+  </div>
 </div>
 
+<div class="uk-card uk-card-default uk-card-body uk-flex uk-flex-center"  style="background-color: #faf0ca">
+  <div class="uk-form-stacked" >
+    <div class="form-group uk-margin">
+      <label class="uk-form-label" for="homeworkTitle form-horizontal-text">Assignment Name: </label>
+      <input type="text" class="form-control uk-input uk-form-width-medium" id="homeworkTitle" aria-describedby="homeworkName" placeholder="Enter Assignment Name">
+    </div>
+    <div class="form-group uk-margin">
+      <label class="uk-form-label" for="homeworkDuration form-horizontal-text">Duration: </label>
+      <input type="text" class="form-control uk-input uk-form-width-medium" id="homeworkDuration" placeholder="Enter Duration (Hours)">
+    </div>
+    <div class="form-group uk-margin">
+      <label class="uk-form-label" for="homeworkDueDate form-horizontal-text">Due Date: </label>
+      <input type="date" class="form-control uk-input uk-form-width-medium" id="homeworkDueDate" placeholder="Enter Due Date (MM/DD/YY)">
+    </div>
+    <!-- <button onclick="fn1()" id= homework_button type="submit" class="btn btn-primary">Add Homework</button> -->
+    <button onclick="fn1()" id="homework_button" style="color:#0d3b66; font-family:Optima; background-color: #faf0ca" >Add Homework</button>
+  </div>
+</div>
+<div>
+  <div class="uk-background-muted uk-padding" style="background-color: #f4d35e">
+</div>
 
-    <!-- THIS IS NEW -->
-    <script type="text/javascript">
-      function fn1()
-      {
-      var Title = document.getelementbyId("homeworkTitle").value;
-     //<!-- add a function to put "+Title as an input for the google calendar-->
+<div class="uk-section uk-section-default uk-text-center uk-section-xlarge" style="background-color: #f4d35e">
+  <div class="uk-container uk-flex uk-flex-column" style="background-color: #f4d35e">
+    <button id="signout_button" style="color:#0d3b66; font-family:Optima; background-color: #faf0ca">Sign Out</button>
+  </div>
+</div>
 
-      var Duration = document.getelementbyId("homeworkDuration").value;
-     // <!-- add a function to put "+Duration as an input for the google calendar-->
+<!-- THIS IS NEW -->
+<script type="text/javascript">
+  function fn1() {
+    var Title = document.getElementById("homeworkTitle").value;
+    var Duration = document.getElementById("homeworkDuration").value;
+    var DueDate = document.getElementById("homeworkDueDate").value;
+    console.log(DueDate);
+    var d = new Date(DueDate);
+    var c = new Date(DueDate);
+    d.setDate(d.getDate()-3);
+    d.setHours(12,0,0,0)
+    console.log(d.toISOString());
+    var m = 12+parseInt(Duration);
+    console.log(m)
+    c.setDate(c.getDate()-3);
+    console.log("bef" + c.toISOString());
+    c.setHours(m,0,0,0)
+    console.log("after" + c.toISOString());
 
-      var DueDate = document.getelementbyId("homeworkDueDate").value;
-     //  <!-- add a function to put "+DueDate as an input for the google calendar-->
+    
+
+    var newEvent = {
+      'summary': Title,
+      'description': 'Reminder from Jour',
+      'start': {
+        'dateTime': (d.toISOString()),
+        'timeZone': 'America/New_York'
+      },
+      'end': {
+        'dateTime': (c.toISOString()),
+        'timeZone': 'America/New_York'
+      },
+      'recurrence': [
+        'RRULE:FREQ=DAILY;COUNT=1'
+      ],
+      'attendees': [],
+      'reminders': {
+        'useDefault': true,
       }
-  </script>
+    };
 
-      <button onclick="fn1()" id="homeworkbutton">Add Homework</button>
+    var request = gapi.client.calendar.events.insert({
+      'calendarId': 'primary',
+      'resource': newEvent
+    });
 
+    request.execute(function(newEvent) {
+      appendPre('Event created: ' + 'Please check your google calendar');
+    });
+  }
+</script>
 
-    <script type="text/javascript">
-      // Client ID and API key from the Developer Console
-      var CLIENT_ID = '143597425278-en9du1u92ggl7q5srr107hi2b261jmok.apps.googleusercontent.com';
-      var API_KEY = 'AIzaSyA5Uf-JYLsRgQDJ3l3K2_ugUc8lO_9vGbk';
+<script type="text/javascript">
+  // Client ID and API key from the Developer Console
+  var CLIENT_ID = '143597425278-en9du1u92ggl7q5srr107hi2b261jmok.apps.googleusercontent.com';
+  var API_KEY = 'AIzaSyA5Uf-JYLsRgQDJ3l3K2_ugUc8lO_9vGbk';
 
-      // Array of API discovery doc URLs for APIs used by the quickstart
-      var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
+  // Array of API discovery doc URLs for APIs used by the quickstart
+  var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
 
-      // Authorization scopes required by the API; multiple scopes can be
-      // included, separated by spaces.
-      var SCOPES = "https://www.googleapis.com/auth/calendar";
+  // Authorization scopes required by the API; multiple scopes can be
+  // included, separated by spaces.
+  var SCOPES = "https://www.googleapis.com/auth/calendar";
+  var authorizeButton = document.getElementById('authorize_button');
+  var signoutButton = document.getElementById('signout_button');
+  var homeworkButton = document.getElementById('homework_button')
 
-      var authorizeButton = document.getElementById('authorize_button');
-      var signoutButton = document.getElementById('signout_button');
-      var homeworkButton = document.getElementById('homework_button')
+  /**
+    *  On load, called to load the auth2 library and API client library.
+    */
+  function handleClientLoad() {
+    gapi.load('client:auth2', initClient);
+  }
 
-      /**
-       *  On load, called to load the auth2 library and API client library.
-       */
-      function handleClientLoad() {
-        gapi.load('client:auth2', initClient);
-      }
+  /**
+    *  Initializes the API client library and sets up sign-in state
+    *  listeners.
+    */
+  function initClient() {
+    gapi.client.init({
+    apiKey: API_KEY,
+    clientId: CLIENT_ID,
+    discoveryDocs: DISCOVERY_DOCS,
+    scope: SCOPES
+    }).then(function () {
+    // Listen for sign-in state changes.
+    gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
 
-      /**
-       *  Initializes the API client library and sets up sign-in state
-       *  listeners.
-       */
+    // Handle the initial sign-in state.
+    updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+    authorizeButton.onclick = handleAuthClick;
+    signoutButton.onclick = handleSignoutClick;
+    }, function(error) {
+        appendPre(JSON.stringify(error, null, 2));
+    });
+  }
+
+  /**
+    *  Called when the signed in status changes, to update the UI
+    *  appropriately. After a sign-in, the API is called.
+    */
+  function updateSigninStatus(isSignedIn) {
+    if (isSignedIn) {
+      authorizeButton.style.display = 'none';
+      signoutButton.style.display = 'block';
+      listUpcomingEvents();
+    } else {
+      authorizeButton.style.display = 'block';
+      signoutButton.style.display = 'none';
+    }
+  }
+
+    /**
+      *  Sign in the user upon button click.
+      */
+    function handleAuthClick(event) {
+      gapi.auth2.getAuthInstance().signIn();
+    }
+
+    /**
+      *  Sign out the user upon button click.
+      */
+    function handleSignoutClick(event) {
+      gapi.auth2.getAuthInstance().signOut();
+    }
+
+    /**
+      * Append a pre element to the body containing the given message
+      * as its text node. Used to display the results of the API call.
+      *
+      * @param {string} message Text to be placed in pre element.
+      */
       function initClient() {
         gapi.client.init({
           apiKey: API_KEY,
@@ -236,44 +312,7 @@
             appendPre('No upcoming events found.');
           }
         });
-      
       }
-      //   var event = {
-      //   'summary': 'homeworkTitle',
-      //   'start': {
-      //     'dateTime': 'homeworkDueDateT09:00:00-07:00',
-      //     'timeZone': 'America/New_York'
-      //   },
-      //   'end': {
-      //     'dateTime': 'homeworkDueDateT17:00:00-07:00',
-      //     'timeZone': 'America/New_York'
-      //   },
-      //   'recurrence': [
-      //     'RRULE:FREQ=DAILY;COUNT=2'
-      //   ],
-      //   'attendees': [
-      //     {'email': 'lpage@example.com'},
-      //     {'email': 'sbrin@example.com'}
-      //   ],
-      //   'reminders': {
-      //     'useDefault': false,
-      //     'overrides': [
-      //       {'method': 'email', 'minutes': 24 * 60},
-      //       {'method': 'popup', 'minutes': 10}
-      //     ]
-      //   }
-      // };
-
-      // var request = gapi.client.calendar.events.insert({
-      //   'calendarId': 'primary',
-      //   'resource': event
-      // });
-
-      // request.execute(function(event) {
-      //   appendPre('Event created: ' + event.htmlLink);
-      // });
-      
-
     </script>
 
     <script async defer src="https://apis.google.com/js/api.js"
